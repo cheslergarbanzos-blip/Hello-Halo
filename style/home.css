@@ -1,15 +1,16 @@
 /* Home page specific styles */
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.9fr);
+  grid-template-columns: minmax(0, 1fr) minmax(480px, 1.5fr);
   align-items: center;
-  gap: 56px;
-  padding: 64px max(40px, calc((100% - 1100px) / 2));
+  gap: 36px;
+  padding: 28px max(24px, calc((100% - 1180px) / 2));
   background-color: #F5E9D0;
 }
 
 .hero-text {
   max-width: 560px;
+  padding: 25px 0px 25px 0;
 }
 
 .hero-tagline {
@@ -35,20 +36,31 @@
 .hero-images {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  gap: 20px;
+  align-items: end;
+  width: 100%;
+  max-width: 640px;
+  margin-left: auto;
 }
 
 .hero-images img {
+  display: block;
   width: 100%;
   aspect-ratio: 4 / 3;
   height: auto;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 14px;
   border: 4px solid #FFFFFF;
+  box-shadow: 0 12px 24px rgba(46, 20, 55, 0.16);
 }
 
 .hero-images img:first-child {
-  margin-top: 32px;
+  margin-top: 40px;
+  transform: translateY(18px);
+}
+
+.hero-images img:last-child {
+  transform: translateY(-18px);
 }
 
 .intro-text {
@@ -72,10 +84,6 @@
   overflow: hidden;
   padding-bottom: 16px;
   transition: box-shadow 0.2s ease;
-}
-
-.featured-card:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .featured-card img {
