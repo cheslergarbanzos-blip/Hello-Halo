@@ -6,6 +6,26 @@
   text-align: center;
 }
 
+#sides {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 56px 0 20px;
+  color: #6A1B9A;
+}
+
+#sides::before,
+#sides::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #E4D5C0);
+}
+
+#sides::after {
+  background: linear-gradient(to left, transparent, #E4D5C0);
+}
+
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -124,6 +144,11 @@
 }
 
 @media (max-width: 520px) {
+  #sides {
+    gap: 10px;
+    margin-top: 40px;
+  }
+
   .menu-grid {
     grid-template-columns: 1fr;
   }

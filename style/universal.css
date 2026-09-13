@@ -66,11 +66,20 @@ ul {
 .logo {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 .logo img {
   height: 54px;
   width: auto;
+}
+
+.logo-name {
+  color: #F5E9D0;
+  font-family: "Monotype Corsiva", "Segoe Script", "Lucida Handwriting", cursive;
+  font-size: 28px;
+  font-weight: bold;
+  white-space: nowrap;
 }
 
 .main-nav {
