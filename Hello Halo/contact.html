@@ -10,7 +10,7 @@
 
   <!-- Header Section -->
   <header class="site-header">
-    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <a href="home.html" class="logo"><img src="../img/hello-hallo%20logo.png" alt="Hello Halo logo"></a>
@@ -42,8 +42,12 @@
       <li><a href="#our-branches">Branch List</a></li>
     </ul>
     <h3>Head Office</h3>
-    <p>KFC88 Building, Quintin Salas St., Jaro, Iloilo City</p>
+      <p>KFC88 Building, Quintin Salas St., Jaro, Iloilo City</p>
     <a href="#our-branches" class="sidebar-cta">View Branches</a>
+    <h3>Follow Us</h3>
+      <p><a href="https://www.facebook.com/p/Hello-Halo-61550557595216/">Facebook</a></p>
+      <p><a href="https://www.instagram.com/hellohalodessertshop/">Instagram</a></p>
+      <p><a href="mailto:hellohalodessertshop2023@gmail.com">Email</a></p>
   </aside>
 
   <!-- Main Content Section -->
@@ -61,10 +65,15 @@
           <h2>Send Us a Message</h2>
           <p>We'd love to hear from you.</p>
         </div>
-        <form class="contact-form" action="#" method="post">
+        <form class="contact-form" action="#" method="post" enctype="multipart/form-data">
           <div class="form-group">
-            <label for="full-name">Full Name</label>
-            <input type="text" id="full-name" name="full-name" placeholder="Juan Dela Cruz" required>
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Juan" required>
+          </div>
+
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Dela Cruz" required>
           </div>
 
           <div class="form-group">
@@ -78,8 +87,23 @@
           </div>
 
           <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Create a password">
+          </div>
+
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" min="1" max="120" placeholder="18">
+          </div>
+
+          <div class="form-group">
             <label for="visit-date">Preferred Visit Date</label>
             <input type="date" id="visit-date" name="visit-date">
+          </div>
+
+          <div class="form-group">
+            <label for="visit-time">Preferred Visit Time</label>
+            <input type="time" id="visit-time" name="visit-time">
           </div>
 
           <div class="form-group">
@@ -112,6 +136,11 @@
           <div class="form-group full-width">
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" placeholder="Type your message here..."></textarea>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="attachment">Upload a File</label>
+            <input type="file" id="attachment" name="attachment">
           </div>
 
           <div class="form-buttons">
@@ -150,13 +179,15 @@
     <section class="branches-section" id="our-branches">
       <h2>Our Branches</h2>
       <table class="branches-table">
+
         <thead>
           <tr>
             <th>Branch</th>
             <th>Address</th>
-            <th>Hours (unconfirmed)</th>
+            <th>Hours</th>
           </tr>
         </thead>
+
         <tbody>
           <tr>
             <td>Molo Mansion</td>
@@ -171,12 +202,12 @@
           <tr>
             <td>Quintin Salas, Jaro</td>
             <td>KFC88 Building, Quintin Salas St., Jaro</td>
-            <td>Listed as 24 hrs on Foodpanda</td>
+            <td>10:00 AM – 6:30 PM</td>
           </tr>
           <tr>
             <td>Dungon B, Jaro</td>
             <td>Dungon B, Jaro</td>
-            <td>~10:00 AM – 8:00 PM</td>
+            <td>10:00 AM – 8:00 PM</td>
           </tr>
           <tr>
             <td>Villa / Arevalo</td>
@@ -196,7 +227,7 @@
           <tr>
             <td>Mabolo / Delgado</td>
             <td>Mabolo Delgado Street, Iloilo City</td>
-            <td>Hours not confirmed</td>
+            <td>10:00 AM – 6:30 PM</td>
           </tr>
         </tbody>
       </table>
@@ -206,12 +237,14 @@
     <section class="branches-section">
       <h2>Other Locations</h2>
       <table class="branches-table">
+
         <thead>
           <tr>
             <th>City</th>
             <th>Notes</th>
           </tr>
         </thead>
+
         <tbody>
           <tr>
             <td>Bacolod</td>
@@ -251,7 +284,8 @@
         <h4>Connect</h4>
         <ul>
           <li><a href="https://www.facebook.com/p/Hello-Halo-61550557595216/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-          <li><a href="mailto:hello@hellohalo.com">Email Us</a></li>
+          <li><a href="https://www.instagram.com/hellohalodessertshop/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="mailto:hellohalodessertshop2023@gmail.com">Email Us</a></li>
         </ul>
       </div>
     </div>
