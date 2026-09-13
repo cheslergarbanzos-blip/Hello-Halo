@@ -1,13 +1,5 @@
 /* Gallery page specific styles */
-.gallery-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-}
-
 .gallery-item {
-  width: 280px;
   background-color: #FFFFFF;
   border: 1px solid #E4D5C0;
   border-radius: 8px;
@@ -18,12 +10,6 @@
 
 .gallery-item:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.gallery-item img {
-  width: 280px;
-  height: 220px;
-  object-fit: cover;
 }
 
 .gallery-item figcaption {
