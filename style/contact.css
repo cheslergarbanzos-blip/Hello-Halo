@@ -29,9 +29,10 @@
 
 /* Form section */
 .contact-form-section {
-  background-color: #F5E9D0;
-  border-left: 6px solid #6A1B9A;
-  border-radius: 8px;
+  background-color: #FFFFFF;
+  border: 1px solid #EADCC9;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(46, 20, 55, 0.08);
   padding: 40px;
   margin-bottom: 40px;
 }
@@ -43,7 +44,7 @@
 
 .form-header {
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .form-header h2 {
@@ -54,12 +55,13 @@
 
 .form-header p {
   color: #706A64;
+  font-size: 15px;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
 }
 
 .form-group {
@@ -69,37 +71,67 @@
 
 .form-group label {
   color: #2E1437;
-  font-weight: bold;
-  margin-bottom: 8px;
+  font-weight: 600;
+  margin-bottom: 6px;
   font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.2px;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
-  padding: 12px;
-  border: 2px solid #E4D5C0;
-  border-radius: 8px;
+  padding: 12px 2px 10px;
+  border: none;
+  border-bottom: 2px solid #E4D5C0;
+  border-radius: 0;
   font-size: 16px;
   font-family: inherit;
   color: #2E1437;
-  background-color: #FFFFFF;
+  background-color: transparent;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9A938D;
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-bottom-color: #D0BDA3;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
+  border-bottom-color: #6A1B9A;
+  box-shadow: 0 2px 0 #6A1B9A;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+  border: 2px solid #E4D5C0;
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.form-group textarea:hover {
+  border-color: #D0BDA3;
+}
+
+.form-group textarea:focus {
   border-color: #6A1B9A;
+  box-shadow: 0 0 0 4px rgba(106, 27, 154, 0.14);
 }
 
 .radio-group,
 .checkbox-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 10px;
 }
 
 .radio-option,
@@ -107,6 +139,12 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid #E4D5C0;
+  border-radius: 999px;
+  background-color: #FFF8EF;
+  color: #4A3F39;
+  font-size: 14px;
   font-weight: normal;
   text-transform: none;
   cursor: pointer;
@@ -121,25 +159,26 @@
 .form-buttons {
   display: flex;
   gap: 16px;
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
 .form-submit {
-  padding: 14px 32px;
+  padding: 13px 30px;
   background-color: #6A1B9A;
   color: #FFFFFF;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-weight: bold;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .form-submit:hover {
   background-color: #4A125E;
+  transform: translateY(-1px);
 }
 
 .form-submit-secondary {
@@ -150,6 +189,12 @@
 
 .form-submit-secondary:hover {
   background-color: #FAF3E8;
+}
+
+.optional {
+  color: #8A847E;
+  font-weight: 500;
+  font-size: 12px;
 }
 
 /* Info cards */
@@ -260,7 +305,7 @@
 .contact-form {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px 24px;
+  gap: 18px 24px;
 }
 
 .form-group.full-width,
